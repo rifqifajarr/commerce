@@ -1,3 +1,4 @@
+import 'package:commerce/app/core/resources/themes.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -9,14 +10,12 @@ class SplashView extends GetView<SplashController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('SplashView'),
-        centerTitle: true,
-      ),
-      body: const Center(
+      body: Center(
         child: Text(
-          'SplashView is working',
-          style: TextStyle(fontSize: 20),
+          'E-Commerce',
+          style: textTheme(
+            context,
+          ).displayMedium?.copyWith(fontWeight: FontWeight.bold),
         ),
       ),
     );
